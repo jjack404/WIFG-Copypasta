@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Crypto Copypasta Madlib</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="app">
+        <button id="randomTemplateBtn"><img src="die.png" class="icon die-icon">Randomize</button>
+        <h2 id="templateTitle"></h2>
+        <div id="pfp-text">
+            <div id="pfp-wrap">
+                <img class="pfp">
+            </div>
+            <div id="template-wrap"><span class="quotes">"</span>
+                <p id="templateText"></p><span class="quotes">"</span>
+            </div>
+        </div>
+        <textarea id="resultText" readonly></textarea>
+        <div id="bottom-buttons">
+            <button id="copyClipboardBtn"><img src="clipboard.png" class="icon">Copy</button>
+            <form name="tweetForm" action="https://twitter.com/intent/tweet" onsubmit="submitTweet();" target="_blank">
+                <input type="hidden" name="text" id="tweetText">
+                <button type="submit" id="tweet"><img src="twitter.jpg" class="icon">Tweet</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="generateTemplate.js" type="module"></script>
+    <script>
+        function submitTweet() {
+            const tweetText = encodeURIComponent(document.getElementById('resultText').value);
+            const tweetUrl = `https://twitter.com/intent/tweet?text=${tweetText}`;
+            window.open(tweetUrl, '_blank');
+        }
+
+    </script>
+</body>
+
+</html>

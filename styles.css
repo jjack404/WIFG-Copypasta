@@ -1,0 +1,152 @@
+@import url('https://fonts.cdnfonts.com/css/reddit-mono');
+
+body,
+html {
+    margin: auto;
+    padding: 0;
+    font-family: 'Reddit Mono', sans-serif;
+    background-color: rgb(44, 44, 44);
+}
+
+body {
+    height: auto;
+    width: auto;
+}
+
+#app {
+    padding: 15px;
+    width: 70%;
+    background-color: black;
+    color: antiquewhite;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.die-icon {
+    transition: transform 0.5s ease-out; /* Adjusted for when hover ends */
+}
+
+#randomTemplateBtn:hover .die-icon {
+    animation: rotateIcon 0.8s infinite linear;
+}
+
+@keyframes rotateIcon {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg); /* Counter-clockwise rotation */
+    }
+}
+
+
+#randomTemplateBtn {
+    border-width: 4px;
+    border-style: double;
+    width: 120px;
+}
+
+#templateTitle {
+    color: antiquewhite;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3px 0;
+}
+
+.quotes {
+    display: inline;
+    font-weight: 900;
+    width: 10px;
+}
+
+#pfp-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#pfp-wrap {
+    width: 20%;
+    text-align: center;
+}
+
+.pfp {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+#template-wrap {
+    width: 75%;
+}
+
+#templateText {
+    margin-bottom: 20px;
+    color: antiquewhite;
+    line-height: 1.5;
+    display: inline;
+}
+
+.inputField {
+    display: inline;
+    width: auto;
+    padding: 1px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    color: antiquewhite;
+    font-family: 'Reddit Mono', sans-serif;
+    line-height: 1;
+}
+
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    resize: none;
+    border-radius: 5px;
+    background-color: rgb(44, 44, 44);
+    color: antiquewhite;
+    font-family: 'Reddit Mono', sans-serif;
+}
+
+#bottom-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button {
+    display: inline-flex;
+    justify-content: center;
+    /* center the content horizontally */
+    align-items: center;
+    width: auto;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #000000;
+    color: antiquewhite;
+    font-family: 'Reddit Mono', sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    margin: auto 0;
+    cursor: pointer;
+}
+
+.icon {
+    width: auto;
+    height: 20px;
+    padding: 1px 4px;
+    margin: auto;
+}
